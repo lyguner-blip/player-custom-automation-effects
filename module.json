@@ -1,0 +1,49 @@
+{
+  "id": "player-custom-automation-effects",
+  "title": "定制自动化效果",
+  "description": "为玩家角色提供可深度定制的规则自动化，并与玩家定制特效库联动。",
+  "version": "0.2.4",
+  "type": "module",
+  "authors": [
+    {
+      "name": "Codex"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "languages": [
+    {
+      "lang": "zh-CN",
+      "name": "简体中文",
+      "path": "lang/zh-CN.json"
+    }
+  ],
+  "relationships": {
+    "requires": [
+      {
+        "id": "player-custom-cinematic-effects",
+        "type": "module"
+      }
+    ],
+    "recommends": [
+      {
+        "id": "sequencer",
+        "type": "module"
+      },
+      {
+        "id": "midi-qol",
+        "type": "module"
+      }
+    ]
+  },
+  "manifest": "https://github.com/lyguner-blip/player-custom-automation-effects/raw/main/module.json",
+  "download": "https://github.com/lyguner-blip/player-custom-automation-effects/archive/refs/heads/main.zip"
+}

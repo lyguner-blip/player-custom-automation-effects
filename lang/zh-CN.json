@@ -1,0 +1,16 @@
+{
+  "PCAE.Settings.ZealousChargeEnabled.Name": "启用特效库绑定角色的狂热冲锋自动化",
+  "PCAE.Settings.ZealousChargeEnabled.Hint": "使用狂热冲锋时，自动将当前由玩家定制特效库匹配到该特效配置的角色移动到目标附近，并调用联动动画。",
+  "PCAE.Settings.ZealousChargeMoveToken.Name": "狂热冲锋移动 Token",
+  "PCAE.Settings.ZealousChargeMoveToken.Hint": "开启后会把触发狂热冲锋的角色 Token 移动到目标相邻格。",
+  "PCAE.Settings.ZealousChargeAnimation.Name": "狂热冲锋联动动画",
+  "PCAE.Settings.ZealousChargeAnimation.Hint": "开启后由本模块接管狂热冲锋动画触发，避免特效库提前播放。",
+  "PCAE.Settings.ZealousChargeMaxDistance.Name": "狂热冲锋最大距离",
+  "PCAE.Settings.ZealousChargeMaxDistance.Hint": "单位为尺。设为 0 时按角色步行速度的两倍计算。",
+  "PCAE.Settings.ZealousChargePendingEffect.Name": "创建下一击提示状态",
+  "PCAE.Settings.ZealousChargePendingEffect.Hint": "冲锋后给角色添加一个短暂状态，提醒下一次攻击有 2d6 光耀伤害。",
+  "PCAE.Settings.ZealousChargeApplyDamage.Name": "自动结算狂热冲锋下一击伤害",
+  "PCAE.Settings.ZealousChargeApplyDamage.Hint": "开启后，绑定角色的下一次攻击检定完成时会自动对攻击目标结算 2d6 光耀伤害。若 Midi-QOL 可用，会使用独立伤害流程；否则会掷出提示伤害。",
+  "PCAE.Settings.ZealousChargePromptWeapon.Name": "狂热冲锋后弹出武器攻击选择",
+  "PCAE.Settings.ZealousChargePromptWeapon.Hint": "开启后，绑定角色完成冲锋并挂上下一击状态后，会弹出武器选择窗口，方便玩家立刻选择巨剑、链枷、标枪等武器衔接攻击。"
+}

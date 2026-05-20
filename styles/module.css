@@ -1,0 +1,128 @@
+#pcce-panel .pcae-panel-section {
+  display: grid;
+  gap: 7px;
+  padding: 8px 10px;
+  color: #f7f3e6;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(75, 82, 88, 0.14);
+}
+
+#pcce-panel .pcae-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+#pcce-panel .pcae-name {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+#pcce-panel .pcae-name strong {
+  overflow: hidden;
+  color: #fff3bd;
+  font-size: 12px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#pcce-panel .pcae-name span {
+  overflow: hidden;
+  color: #cdbf9f;
+  font-size: 11px;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#pcce-panel .pcae-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #efe2bc;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+#pcce-panel .pcae-run {
+  min-width: 28px;
+  height: 26px;
+  color: #fff7df;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 236, 180, 0.22);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pcce-panel .pcae-run:hover:not(:disabled) {
+  background: rgba(255, 205, 96, 0.2);
+  border-color: rgba(255, 226, 142, 0.6);
+}
+
+#pcce-panel .pcae-run:disabled {
+  color: rgba(255, 247, 223, 0.35);
+  cursor: default;
+}
+
+#pcce-panel .pcae-mini {
+  color: #cdbf9f;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.pcae-weapon-dialog {
+  display: grid;
+  gap: 10px;
+}
+
+.pcae-weapon-dialog p {
+  margin: 0;
+}
+
+.pcae-weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.pcae-weapon-card {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 6px 8px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pcae-weapon-grid img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 3px;
+}
+
+.pcae-weapon-grid span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pcae-weapon-grid em {
+  grid-column: 2;
+  color: #8f6;
+  font-size: 11px;
+  font-style: normal;
+}
