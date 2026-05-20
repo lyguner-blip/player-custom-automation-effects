@@ -511,9 +511,10 @@ async function chooseChargeWeaponDialog(actor, target, weapons) {
       <p>${escapeHTML(actor?.name ?? "角色")} 已完成冲锋。选择一个武器攻击 ${escapeHTML(targetName)}。</p>
       <div class="pcae-weapon-grid">
         ${weapons.map((weapon, index) => `
-          <button type="button" class="pcae-weapon-card" data-weapon-index="${index}">
+          <button type="button" class="pcae-weapon-card" data-weapon-index="${index}" title="${escapeAttribute(`用 ${weapon.name ?? "武器"} 攻击 ${targetName}`)}">
             <img src="${escapeAttribute(weapon.img ?? "icons/svg/sword.svg")}" alt="">
             <span>${escapeHTML(weaponButtonLabel(weapon, index))}</span>
+            <strong>攻击</strong>
             ${weapon.system?.equipped ? "<em>已装备</em>" : ""}
           </button>
         `).join("")}
@@ -535,7 +536,15 @@ async function chooseChargeWeaponDialog(actor, target, weapons) {
       app = new foundry.applications.api.DialogV2({
         window: { title },
         content,
-        buttons: [{ action: "cancel", label: "暂不攻击", callback: () => finish(null) }],
+        buttons: [
+          ...weapons.map((weapon, index) => ({
+            action: `weapon-${index}`,
+            label: `攻击 ${weaponButtonLabel(weapon, index)}`,
+            default: index === 0,
+            callback: () => finish(weapon)
+          })),
+          { action: "cancel", label: "暂不攻击", callback: () => finish(null) }
+        ],
         render: (event, dialog) => {
           dialog.element.querySelectorAll("[data-weapon-index]").forEach((button) => {
             button.addEventListener("click", () => finish(weapons[Number(button.dataset.weaponIndex)]));
@@ -548,10 +557,19 @@ async function chooseChargeWeaponDialog(actor, target, weapons) {
     }
 
     if (!globalThis.Dialog) return finish(weapons[0]);
+    const buttons = Object.fromEntries(weapons.map((weapon, index) => [
+      `weapon${index}`,
+      {
+        label: `攻击 ${weaponButtonLabel(weapon, index)}`,
+        callback: () => finish(weapon)
+      }
+    ]));
+    buttons.cancel = { label: "暂不攻击", callback: () => finish(null) };
     app = new Dialog({
       title,
       content,
-      buttons: { cancel: { label: "暂不攻击", callback: () => finish(null) } },
+      buttons,
+      default: "weapon0",
       render: (html) => {
         const root = html?.[0] ?? html;
         root.querySelectorAll?.("[data-weapon-index]").forEach((button) => {

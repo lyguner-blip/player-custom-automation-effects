@@ -95,7 +95,7 @@
 
 .pcae-weapon-card {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-columns: 28px minmax(0, 1fr) auto;
   align-items: center;
   gap: 7px;
   min-height: 40px;
@@ -104,6 +104,14 @@
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.pcae-weapon-card:hover,
+.pcae-weapon-card:focus {
+  border-color: rgba(255, 198, 101, 0.9);
+  background: rgba(255, 198, 101, 0.12);
+  box-shadow: 0 0 0 1px rgba(255, 198, 101, 0.24);
 }
 
 .pcae-weapon-grid img {
@@ -120,8 +128,15 @@
   white-space: nowrap;
 }
 
+.pcae-weapon-grid strong {
+  color: #ffd58a;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .pcae-weapon-grid em {
-  grid-column: 2;
+  grid-column: 2 / 4;
   color: #8f6;
   font-size: 11px;
   font-style: normal;
