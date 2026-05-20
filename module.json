@@ -2,7 +2,7 @@
   "id": "player-custom-automation-effects",
   "title": "定制自动化效果",
   "description": "为玩家角色提供可深度定制的规则自动化，并与玩家定制特效库联动。",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "type": "module",
   "authors": [
     {

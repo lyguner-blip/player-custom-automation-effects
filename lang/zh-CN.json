@@ -12,5 +12,7 @@
   "PCAE.Settings.ZealousChargeApplyDamage.Name": "自动结算狂热冲锋下一击伤害",
   "PCAE.Settings.ZealousChargeApplyDamage.Hint": "开启后，绑定角色的下一次攻击检定完成时会自动对攻击目标结算 2d6 光耀伤害。若 Midi-QOL 可用，会使用独立伤害流程；否则会掷出提示伤害。",
   "PCAE.Settings.ZealousChargePromptWeapon.Name": "狂热冲锋后弹出武器攻击选择",
-  "PCAE.Settings.ZealousChargePromptWeapon.Hint": "开启后，绑定角色完成冲锋并挂上下一击状态后，会弹出武器选择窗口，方便玩家立刻选择巨剑、链枷、标枪等武器衔接攻击。"
+  "PCAE.Settings.ZealousChargePromptWeapon.Hint": "开启后，绑定角色完成冲锋并挂上下一击状态后，会弹出武器选择窗口，方便玩家立刻选择巨剑、链枷、标枪等武器衔接攻击。",
+  "PCAE.Settings.MonkFocusEnabled.Name": "启用特效库绑定角色的武僧武功自动化",
+  "PCAE.Settings.MonkFocusEnabled.Hint": "使用武僧武功及其子活动时，由本模块接管对应电影级特效触发，保留疾风连击、疾步如风、闪转腾挪等活动差分。"
 }
