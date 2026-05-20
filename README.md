@@ -61,18 +61,6 @@ git clone https://github.com/lyguner-blip/player-custom-automation-effects.git
 4. 在角色条目中查看“定制自动化”区域。
 5. 根据需要打开或关闭狂热冲锋的移动、动画、伤害和衔接攻击选项。
 
-## 设置项
-
-模块提供以下世界设置：
-
-- 启用特效库绑定角色的狂热冲锋自动化
-- 狂热冲锋移动 Token
-- 狂热冲锋联动动画
-- 狂热冲锋最大距离
-- 创建下一击提示状态
-- 自动结算狂热冲锋下一击伤害
-- 狂热冲锋后弹出武器攻击选择
-
 ## 开发
 
 主要文件：
@@ -88,6 +76,4 @@ git clone https://github.com/lyguner-blip/player-custom-automation-effects.git
 node --check scripts/main.mjs
 ```
 
-## 隐私与发布
 
-仓库中的 `manifest` 和 `download` 字段使用 GitHub 地址，不包含私人服务器 IP 或本地部署路径。
